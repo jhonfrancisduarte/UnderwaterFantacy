@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+body { 
+    padding: 0; margin: 0;
+    background: #181A1D;
+    font-family: "Exo", sans-serif;
+    overflow: hidden;
+ }
+#unity-container { 
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+ }
+#unity-container.unity-desktop { 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+ }
+#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-canvas { background: #181A1D }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { 
+    position: absolute; 
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); 
+    display: none;
+}
+#unity-logo { 
+    width: 154px; height: 130px; 
+    background: url('unity-logo-dark.png') no-repeat center;
+    display: none;
+ }
+#unity-progress-bar-empty { 
+    width: 141px; height: 6px; 
+    border-radius: 3px;
+    margin-top: 10px; 
+    margin-left: 6.5px; 
+    background: #444444 !important;
+ }
+#unity-progress-bar-full { 
+    width: 0%; height: 6px;
+    border-radius: 3px; 
+    margin-top: 10px; 
+    background: white;
+ }
+#unity-footer { 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex; 
+}
+.unity-mobile #unity-footer { display: none }
+#unity-webgl-logo { 
+    float:left; width: 204px; 
+    height: 38px; 
+    background: url('webgl-logo.png') no-repeat center; 
+    display: none;
+}
+#unity-build-title { 
+    float: right; margin-right: 10px; 
+    line-height: 38px; 
+    font-family: arial; 
+    font-size: 18px;
+    display: none;
+}
+#unity-fullscreen-button { 
+    float: right; width: 38px; 
+    height: 38px; 
+    background: url('fullscreen-button.png') no-repeat center;
+    display: none;
+ }
+#unity-warning { 
+    position: absolute; left: 50%; 
+    top: 5%; transform: translate(-50%); 
+    background: rgb(247, 247, 247); 
+    padding: 10px; display: none;
+    border-radius: 20px;
+ }
+
+ #unity-warning div{
+    background: rgb(247, 247, 247) !important; 
+    color: rgb(99, 1, 1);
+ }
+
+ .ava-logo{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 40px;
+ }
+ .ava-logo:hover{
+    transform: scale(1.05);
+ }
+
+ .description{
+    position: absolute;
+    bottom: 50px; left: 25px;
+    width: 300px;
+    background: rgb(253, 245, 245);
+    border-radius: 10px 10px 10px 0;
+    padding: 0 20px;
+    transition: all 0.3s ease-in-out;
+ }
+
+ .description h1{
+    padding: 0;
+ }
+
+ .description h4{
+    margin-top: -20px;
+ }
+
+ .description p{
+    text-align: justify;
+ }
